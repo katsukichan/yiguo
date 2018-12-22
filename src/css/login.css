@@ -1,0 +1,238 @@
+@charset "UTF-8";
+a {
+  font-size: 12px;
+}
+
+#header {
+  background: #E0E0E0;
+}
+
+.header {
+  padding: 15px 0 5px 0;
+}
+
+.header .logo a {
+  display: block;
+  width: 150px;
+  height: 50px;
+  background: url(../img/logo.png) no-repeat;
+}
+
+.header .logo .h_tit {
+  font-size: 28px;
+  text-align: center;
+  margin-left: 45px;
+  color: #008842;
+}
+
+#login {
+  background: #FFFFFF;
+}
+
+.login {
+  padding: 30px 0;
+}
+
+.login .login_main {
+  width: 308px;
+  padding: 30px 20px 20px;
+  background-color: #fff;
+  border: 1px solid #e3e6e0;
+  margin-right: 70px;
+}
+
+.login .login_main .msg_wrap {
+  /*错误信息提示样式*/
+  display: none;
+  margin-bottom: 5px;
+  background: #FFEBEB;
+  border: 1px solid #E4393C;
+  padding: 3px 10px 3px 40px;
+  line-height: 18px;
+  min-height: 18px;
+  color: #E4393C;
+  font-size: 12px;
+}
+
+.login .login_main p {
+  color: #878787;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.login .login_main p strong {
+  font-size: 18px;
+  color: #262626;
+}
+
+.login .login_main p .l_tit {
+  padding-top: 10px;
+  font-size: 12px;
+}
+
+.login .login_main p .l_tit a {
+  text-decoration: underline;
+  color: #008842;
+}
+
+.login .login_main p .input_phone_icon, .login .login_main p .input_key_icon {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #C1C1C1;
+  border-right: none;
+  background-image: url(../img/input_bg.png);
+  background-repeat: no-repeat;
+  vertical-align: top;
+}
+
+.login .login_main p .input_phone_icon {
+  background-position: 0 -120px;
+}
+
+.login .login_main p .input_key_icon {
+  background-position: 0 -180px;
+}
+
+.login .login_main p .input {
+  width: 256px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #C1C1C1;
+  padding-left: 10px;
+}
+
+.login .login_main p label {
+  color: #878787;
+}
+
+.login .login_main p label input {
+  margin-right: 5px;
+}
+
+.login .login_main p .gray {
+  color: #878787;
+}
+
+.login .login_main p #btnLogin {
+  display: block;
+  width: 306px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  text-align: center;
+  background: #008842;
+  color: #FFFFFF;
+}
+
+.login .login_main .p_code_btn a {
+  margin-right: 10px;
+}
+
+.login .login_main .p_code_btn i {
+  display: inline-block;
+  width: 88px;
+  height: 20px;
+}
+
+.login .login_main .p_code_btn .qq i {
+  background: url(../img/login_qq.png) no-repeat;
+}
+
+.login .login_main .p_code_btn .sina i {
+  background: url(../img/login_wb.png) no-repeat;
+}
+
+.login .login_main .p_code_btn .ay i {
+  width: 57px;
+  background: url(../img/login_es.png) no-repeat;
+}
+
+#footer {
+  background: #F7F8F8;
+}
+
+.footer {
+  padding-top: 30px;
+}
+
+.footer dl {
+  float: left;
+  width: 190px;
+  margin-left: 50px;
+  display: inline-block;
+}
+
+.footer dl dt {
+  height: 23px;
+  line-height: 23px;
+  background: url(../img/footer_icon.png) no-repeat;
+  font-size: 14px;
+  text-indent: 40px;
+  color: #444444;
+}
+
+.footer dl dd {
+  border-left: 1px dashed #A8A8A8;
+  padding-left: 20px;
+  height: 110px;
+  min-height: 110px;
+  margin: 15px 0 0 13px;
+}
+
+.footer dl dd p {
+  font-size: 12px;
+  color: #575556;
+}
+
+.footer dl dd p a {
+  color: #575556;
+  line-height: 22px;
+}
+
+.footer .col1 dt {
+  background-position: 0 0;
+}
+
+.footer .col2 dt {
+  background-position: 0 -23px;
+}
+
+.footer .col3 dt {
+  background-position: 0 -46px;
+}
+
+.footer .col4 dt {
+  background-position: 0 -69px;
+}
+
+.footer .col5 dt {
+  background-position: 0 -92px;
+}
+
+.footer .service {
+  text-align: center;
+  padding: 60px 0 20px;
+  color: #008842;
+  font-size: 14px;
+}
+
+.footer .copyright {
+  font-size: 12px;
+  color: #717171;
+  text-align: center;
+  line-height: 22px;
+}
+
+.footer .copyright a {
+  color: #717171;
+}
+
+.footer .copyright .authentication {
+  margin-top: 10px;
+}
+
+.footer .copyright .authentication img {
+  height: 47px;
+  margin-right: 10px;
+}

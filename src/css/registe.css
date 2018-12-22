@@ -1,0 +1,218 @@
+a {
+  font-size: 12px;
+}
+
+#header {
+  background: #E0E0E0;
+}
+
+.header {
+  padding: 15px 0 5px 0;
+}
+
+.header .logo a {
+  display: block;
+  width: 150px;
+  height: 50px;
+  background: url(../img/logo.png) no-repeat;
+}
+
+.header .logo .h_tit {
+  font-size: 28px;
+  text-align: center;
+  margin-left: 45px;
+  color: #008842;
+}
+
+#registe {
+  background: #F7F8F8;
+  padding: 50px 0;
+}
+
+.registe {
+  padding-top: 15px;
+  background: #FFFFFF;
+}
+
+.registe .tab div {
+  margin-right: 35px;
+  font-size: 14px;
+  color: #444444;
+}
+
+.registe .tab div a {
+  font-size: 14px;
+  color: #EF760A;
+  text-decoration: underline;
+  margin-left: 3px;
+}
+
+.registe .table_main {
+  padding-left: 20px;
+}
+
+.registe .table_main .fl p {
+  margin-bottom: 29px;
+  font-size: 14px;
+  color: #444444;
+}
+
+.registe .table_main .fl p .field_name {
+  display: inline-block;
+  width: 220px;
+  padding-right: 20px;
+  text-align: right;
+}
+
+.registe .table_main .fl p .input {
+  border: 1px solid #c1c1c1;
+  background-color: #fff;
+  height: 38px;
+  vertical-align: middle;
+  padding-left: 14px;
+}
+
+.registe .table_main .fl p .input_phone, .registe .table_main .fl p .input_key {
+  width: 290px;
+}
+
+.registe .table_main .fl p .showCode {
+  display: inline-block;
+  width: 106px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #008842;
+  color: #ffffff;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
+.registe .table_main .fl p #tabchk {
+  width: 14px;
+  height: 14px;
+  margin-right: 9px;
+}
+
+.registe .table_main .fl p .green {
+  color: #008842;
+}
+
+.registe .table_main .fl p #registeBtn {
+  display: inline-block;
+  width: 306px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  text-align: center;
+  color: #FFF7DF;
+}
+
+.registe .table_main .fl p .greenBtn {
+  background: #008842;
+}
+
+.registe .table_main .fl p .error {
+  color: red;
+}
+
+.registe .table_main .fr {
+  padding-top: 50px;
+  text-align: center;
+}
+
+.registe .table_main img {
+  width: 327px;
+  height: 316px;
+  display: block;
+}
+
+#footer {
+  background: #F7F8F8;
+}
+
+.footer {
+  padding-top: 30px;
+}
+
+.footer dl {
+  float: left;
+  width: 190px;
+  margin-left: 50px;
+  display: inline-block;
+}
+
+.footer dl dt {
+  height: 23px;
+  line-height: 23px;
+  background: url(../img/footer_icon.png) no-repeat;
+  font-size: 14px;
+  text-indent: 40px;
+  color: #444444;
+}
+
+.footer dl dd {
+  border-left: 1px dashed #A8A8A8;
+  padding-left: 20px;
+  height: 110px;
+  min-height: 110px;
+  margin: 15px 0 0 13px;
+}
+
+.footer dl dd p {
+  font-size: 12px;
+  color: #575556;
+}
+
+.footer dl dd p a {
+  color: #575556;
+  line-height: 22px;
+}
+
+.footer .col1 dt {
+  background-position: 0 0;
+}
+
+.footer .col2 dt {
+  background-position: 0 -23px;
+}
+
+.footer .col3 dt {
+  background-position: 0 -46px;
+}
+
+.footer .col4 dt {
+  background-position: 0 -69px;
+}
+
+.footer .col5 dt {
+  background-position: 0 -92px;
+}
+
+.footer .service {
+  text-align: center;
+  padding: 60px 0 20px;
+  color: #008842;
+  font-size: 14px;
+}
+
+.footer .copyright {
+  font-size: 12px;
+  color: #717171;
+  text-align: center;
+  line-height: 22px;
+}
+
+.footer .copyright a {
+  color: #717171;
+}
+
+.footer .copyright .authentication {
+  margin-top: 10px;
+}
+
+.footer .copyright .authentication img {
+  height: 47px;
+  margin-right: 10px;
+}

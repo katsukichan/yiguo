@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/registe.css">
+    <script src="../js/common.js"></script>
+    <script src="../lib/jquery-3.2.1.js"></script>
+    <script src="../js/registe.js"></script>
+</head>
+<body>
+    <!-- header顶部 -->
+    <div id="header">
+        <div class="header con">
+            <div class="logo clearfix">
+                <a href="javascript:;" class="fl"></a>
+                <span class="h_tit fl">注册</span>
+            </div>
+        </div>
+    </div>
+    <!-- registe注册主体 -->
+    <div id="registe">
+        <div class="registe con">
+            <!-- 登录tab -->
+            <div class="tab clearfix">
+                <div class="fr">我已经注册，现在就<a href="login.html">登录</a></div>
+            </div>
+            <!-- 表格主体 -->
+            <div class="table_main clearfix">
+                <div class="fl">
+                    <!-- 各p元素内span为错误信息提示标签 -->
+                    <!-- 手机号 -->
+                    <p>
+                        <span class="field_name">手机号</span>
+                        <input class="input input_phone" id="phone_mobile" placeholder="请输入您的手机号" type="text" value="" maxlength="11">
+                        <span class="error"></span>
+                    </p>
+                    <!-- 验证码 -->
+                    <p>
+                        <span class="field_name">验证码</span>
+                        <input class="input input_yzm" id="verify_code" placeholder="验证码" type="text" value="" maxlength="4"> 
+                        <span class="showCode"></span>
+                        <span class="error"></span>
+                    </p>
+                    <!-- 密码 -->
+                    <p>
+                        <span class="field_name">设置密码</span>
+                        <input class="input input_key" id="password" placeholder="6-20位字母、符号或数字" type="password" maxlength="20">
+                        <span class="error"></span>
+                    </p>
+                    <p>
+                        <span class="field_name">确认密码</span>
+                        <input class="input input_key" id="confim_password" placeholder="再次输入密码" type="password" maxlength="20">
+                        <span class="error"></span>
+                    </p>
+                    <!-- 同意协议 -->
+                    <p>
+                        <span class="field_name"></span><label><input type="checkbox" id="tabchk">我已阅读并同意
+                        <a href="javascript:;" class="green">《易果服务协议》</a>
+                        <a href="javascript:;" class="green">《隐私政策》</a>
+                        <span class="error"></span></label>
+                    </p>
+                    <!-- 注册按钮 -->
+                    <p><span class="field_name"></span><a href="javascript:;" id="registeBtn" class="greenBtn" disabled="disabled">立即注册</a></p>
+                </div>
+                <div class="fr">
+                    <img src="../img/register_rightImg.png">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer底部 -->
+    <div id="footer">
+        <div class="footer con">
+            <div class="footer_list clearfix">
+                <dl class="col1">
+                    <dt>新手指南</dt>
+                    <dd>
+                        <p><a href="javascript:;">账户注册</a></p>
+                        <p><a href="javascript:;">购物流程</a></p>
+                        <p><a href="javascript:;">订购方式</a></p>
+                        <p><a href="javascript:;">悠币说明</a></p>
+                        <p><a href="javascript:;">会员等级</a></p>
+                    </dd>
+                </dl>
+                <dl class="col2">
+                    <dt>付款方式</dt>
+                    <dd>
+                        <p><a href="javascript:;">支付方式</a>/<a href="javascript:;">发票说明</a></p>
+                        <p><a href="javascript:;">充值说明</a>/<a href="javascript:;">礼品卡绑定</a></p>
+                        <p><a href="javascript:;">优惠代码</a></p>
+                        <p><a href="javascript:;">卡券购买章程</a></p>
+                    </dd>
+                </dl>
+                <dl class="col3">
+                    <dt>配送方式</dt>
+                    <dd>
+                        <p><a href="javascript:;">配送运费</a></p>
+                        <p><a href="javascript:;">配送范围</a></p>
+                        <p><a href="javascript:;">配送时间</a></p>
+                    </dd>
+                </dl>
+                <dl class="col4">
+                    <dt>售后服务</dt>
+                    <dd>
+                        <p><a href="javascript:;">退换货政策</a></p>
+                        <p><a href="javascript:;">退换货流程</a></p>
+                        <p><a href="javascript:;">常见问题</a></p>
+                        <p><a href="javascript:;">投诉与建议</a></p>
+                    </dd>
+                </dl>
+                <dl class="col5">
+                    <dt>关于我们</dt>
+                    <dd>
+                        <p><a href="javascript:;">公司介绍</a></p>
+                        <p><a href="javascript:;">联系我们</a></p>
+                        <p><a href="javascript:;">业务合作</a></p>
+                        <p><a href="javascript:;">诚信举报</a></p>
+                        <p> <a href="javascript:;"> 用户协议</a></p>
+                        <p><a href="javascript:;">隐私协议</a></p>
+                        <p><a href="javascript:;">人才招聘</a></p>
+                    </dd>
+                </dl>
+            </div>            
+            <div class="service"><span>客服热线 400-000-7788</span><span>周一至周日 9:00-21:00</span></div>
+            <div class="copyright">
+                <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
+                <p><a href="javascript:;">沪ICP备18045674号-1</a> Copyright © 2005-2018 版权所有</p>
+                <p class="authentication">
+                    <a href="javascript:;"><img src="../img/footer_copyRight1.png"></a>
+                    <a href="javascript:;"><img src="../img/footer_copyRight2.png" width="47px" height="47px"></a>
+                    <a href="javascript:;"><img src="../img/footer_copyRight3.png"><span style="width: 180px;">沪公网安备 31010502000002号</span></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
