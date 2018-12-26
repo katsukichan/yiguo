@@ -88,19 +88,33 @@ jQuery(function($){
         }
     })
 
+    //点击商品，传输商品guid
+    $item_list.on('click',function(e){
+        if(e.target.tagName == "IMG"){
+            var currentLi = e.target.parentElement.parentElement.parentElement;
+            var guid = currentLi.getAttribute('data-guid');
+            location.href = `datails.html?guid=${guid}`;
+        }
+        if(e.target.tagName == "A"){
+            var currentLi = e.target.parentElement.parentElement.parentElement;
+            var guid = currentLi.getAttribute('data-guid');
+            location.href = `datails.html?guid=${guid}`;
+        }
+    })
+    
     //商品列表渲染
     function createList(data){
         var str = '';
         $item_list.html(data.map(function(item){
-            return `<li>
+            return `<li data-guid=${item.guid}>
                         <div class="item_img">
-                            <a href="datails.html">
+                            <a href="javascript:;">
                                 <img src="../${item.gimg}" width="290" height="290">
                             </a>
                         </div>
                         <div class="item_info">
                             <div class="item_msg">
-                                <a href="datails.html">
+                                <a href="javascript:;">
                                     ${item.gmsg}
                                 </a>
                             </div>
@@ -113,7 +127,6 @@ jQuery(function($){
     }
 
     function getData(){
-        console.log(arguments);
         if(arguments[2] == 's_default'){
             var urlcontent = `../api/goods_data.php?qty=${qty}&currentPage=${currentPage}&s_default=${true}`;
         }

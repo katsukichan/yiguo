@@ -1,4 +1,7 @@
 <?php
+    //传入商品id判断
+    $guid = isset($_GET["guid"])? $_GET["guid"] : null;
+    
     //判断是否进行排序
     //默认排序
     $s_default = isset($_GET["s_default"])? $_GET["s_default"] : false;
@@ -21,6 +24,21 @@
     }
     //查询前设置编码，防止输出乱码
     $conn->set_charset('utf8');
+
+    if($guid != null){
+        $res = $conn->query('select * from goods_data where guid="'.$guid.'"');
+        if($res->num_rows > 0){
+            $content = $res->fetch_all(MYSQLI_ASSOC);
+        }else{
+            echo "没有满足条件的数据";
+        }
+        echo json_encode($content,JSON_UNESCAPED_UNICODE);
+
+        $res->close();
+        $conn->close();
+    }
+
+
 
     //默认排序，根据商品guid排序
     if($s_default){

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/shopcar.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <script src="../lib/jquery-3.2.1.js"></script>
+    <script src="../js/shopcar.js"></script>
+</head>
+<body>
+    <!-- top_nav顶部导航 -->
+    <div id="top_nav">
+        <div class="top_nav con clearfix">
+            <ul class="fl clearfix">
+                <li>欢迎光临易果生鲜!</li>
+                <li class="city clearfix">
+                    <div class="city_sent">配送至:</div>
+                    <div class="city_title">广州</div>
+                </li>
+            </ul>
+            <ul class="fr">
+                <li class="apt"><img src="../img/apt_icon.png"/><a href="javascript:;">营业资质</a></li>
+                <li class="tel"><a href="javascript:;"><i></i>礼品兑换券入口</a></li>
+                <li class="pay"><a href="javascript:;"><i></i>礼品卡绑定</a></li>
+                <li class="mobile"><a href="javascript:;"><i></i>手机易果<s></s></a></li>
+                <li class="my_yiguo"><a href="javascript:;"><i></i>我的易果<s></s></a></li>
+                <li><a href="registe.html">[注册]</a></li>
+                <li><a href="login.html">[登录]</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- header头部 -->
+    <div id="header">
+        <div class="header con clearfix">
+            <!-- logo -->
+            <div class="logo">
+                <a href="../index.html" class="fl"></a>              
+            </div>
+        </div>
+    </div>
+    <!-- cart购物车 -->
+    <div id="cart">
+        <div class="cart con">
+            <!-- 购物车无物品结构 -->
+            <div class="cart_none">
+                <p>
+                    <b>
+                        购物车是空的，去买点东西吧！
+                        <a href="../index.html">去逛逛</a>
+                    </b>
+                    您尚未登录<a href="login.html">登录</a>
+                </p>
+            </div>
+            <!-- 购物车有物品时结构 -->
+            <div class="cart_in">
+                <h2>我的购物车
+                    <a href="../index.html">继续购物</a>
+                </h2>
+                <!-- 购物车主体 -->
+                <div class="cart_cotainer">
+                    <!-- 购物车头部 -->
+                    <div class="cart_header">
+                        <table class="cart_table">
+                            <tbody>
+                                <tr>
+                                    <th class="t_check">
+                                        <label>
+                                            <input type="checkbox" class="check_all">
+                                            全选
+                                        </label>
+                                    </th>
+                                    <th class="t_info">商品信息</th>
+                                    <th class="t_price">单价</th>
+                                    <th class="t_num">购买数量</th>
+                                    <th class="t_total">合计</th>
+                                    <th class="t_spec">规格</th>
+                                    <th class="t_opera">操作</th>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 购物车列表 -->
+                    <div class="cart_list">
+                        <table class="cart_table">
+                            <tbody>
+                                <tr>
+                                    <td class="t_check">
+                                        <input type="checkbox">
+                                    </td>
+                                    <td class="t_img">
+                                        <img src="../img/goods_item1.jpg">
+                                    </td>
+                                    <td class="t_info">美威欧式原味三文鱼排(2片装)250g*2</td>
+                                    <td class="t_price">￥125.00</td>
+                                    <td class="t_num">
+                                        <div class="num_box">
+                                            <a href="javascript:;" class="decrease"></a>
+                                            <input type="text" maxlength="2" class="itxt">
+                                            <a href="javascript:;" class="increase"></a>
+                                        </div>
+                                    </td>
+                                    <td class="t_total">￥125.00</td>
+                                    <td class="t_spec">(2片装)250g*2</td>
+                                    <td class="t_opera"><a href="javascript:;">删除</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- 购物车底部 -->
+                    <div class="cart_footer clearfix">
+                        <div class="fl">
+                            <label>
+                                <input type="checkbox" class="check_all">
+                                全选
+                            </label>
+                            <a href="javascript:;">删除选中商品</a>
+                            <a href="javascript:;">清空购物车</a>
+                        </div>
+                        <div class="fr">
+                            <span>
+                                总价:
+                                <em>￥125.00</em>
+                            </span>
+                            <a href="javascript:;" class="btn">去结算</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer_service底部服务 -->
+    <div id="footer_service">
+        <div class="footer_service con">
+            <ul class="clearfix">
+                <li class="s1">
+                    <b>全球精选</b>
+                    <span>一站式生鲜购物方案</span>
+                </li>
+                <li class="s2">
+                    <b>多仓直发</b>
+                    <span>次日达配送服务</span>
+                </li>
+                <li class="s3">
+                    <b>品质严选</b>
+                    <span>精选正宗品质好食材</span>
+                </li>
+                <li class="s4">
+                    <b>天天低价</b>
+                    <span>会员专属优惠购不停</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- footer底部 -->
+    <div id="footer">
+        <div class="footer con">
+            <div class="footer_list clearfix">
+                <dl class="col1">
+                    <dt>新手指南</dt>
+                    <dd>
+                        <p><a href="javascript:;">账户注册</a></p>
+                        <p><a href="javascript:;">购物流程</a></p>
+                        <p><a href="javascript:;">订购方式</a></p>
+                        <p><a href="javascript:;">悠币说明</a></p>
+                        <p><a href="javascript:;">会员等级</a></p>
+                    </dd>
+                </dl>
+                <dl class="col2">
+                    <dt>付款方式</dt>
+                    <dd>
+                        <p><a href="javascript:;">支付方式</a>/<a href="javascript:;">发票说明</a></p>
+                        <p><a href="javascript:;">充值说明</a>/<a href="javascript:;">礼品卡绑定</a></p>
+                        <p><a href="javascript:;">优惠代码</a></p>
+                        <p><a href="javascript:;">卡券购买章程</a></p>
+                    </dd>
+                </dl>
+                <dl class="col3">
+                    <dt>配送方式</dt>
+                    <dd>
+                        <p><a href="javascript:;">配送运费</a></p>
+                        <p><a href="javascript:;">配送范围</a></p>
+                        <p><a href="javascript:;">配送时间</a></p>
+                    </dd>
+                </dl>
+                <dl class="col4">
+                    <dt>售后服务</dt>
+                    <dd>
+                        <p><a href="javascript:;">退换货政策</a></p>
+                        <p><a href="javascript:;">退换货流程</a></p>
+                        <p><a href="javascript:;">常见问题</a></p>
+                        <p><a href="javascript:;">投诉与建议</a></p>
+                    </dd>
+                </dl>
+                <dl class="col5">
+                    <dt>关于我们</dt>
+                    <dd>
+                        <p><a href="javascript:;">公司介绍</a></p>
+                        <p><a href="javascript:;">联系我们</a></p>
+                        <p><a href="javascript:;">业务合作</a></p>
+                        <p><a href="javascript:;">诚信举报</a></p>
+                        <p> <a href="javascript:;"> 用户协议</a></p>
+                        <p><a href="javascript:;">隐私协议</a></p>
+                        <p><a href="javascript:;">人才招聘</a></p>
+                    </dd>
+                </dl>
+            </div>            
+            <div class="service"><span>客服热线 400-000-7788</span><span>周一至周日 9:00-21:00</span></div>
+            <div class="copyright">
+                <p>所有图片均受著作权保护，未经许可任何单位与个人不得使用、复制、转载、摘编，违者必究法律责任。</p>
+                <p><a href="javascript:;">沪ICP备18045674号-1</a> Copyright © 2005-2018 版权所有</p>
+                <p class="authentication">
+                    <a href="javascript:;"><img src="../img/footer_copyRight1.png"></a>
+                    <a href="javascript:;"><img src="../img/footer_copyRight2.png" width="47px" height="47px"></a>
+                    <a href="javascript:;"><img src="../img/footer_copyRight3.png"><span style="width: 180px;">沪公网安备 31010502000002号</span></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
