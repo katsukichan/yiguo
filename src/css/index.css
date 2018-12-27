@@ -74,6 +74,17 @@ a {
   background: url(../img/header_icon.png) no-repeat -12px 0;
 }
 
+.top_nav .fr .login .user {
+  display: inline-block;
+  width: 50px;
+  font-size: 12px;
+  color: #444444;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
 .top_nav .fr .tel i {
   background-position: -86px 0;
 }
@@ -210,12 +221,17 @@ a {
 }
 
 .header .shop_car .shop_list .nogoods {
+  display: none;
   width: 380px;
   height: 120px;
   line-height: 120px;
   font-size: 14px;
   color: #444444;
   text-align: center;
+}
+
+.header .shop_car .shop_list .goods {
+  display: none;
 }
 
 .header .shop_car .shop_list .goodslist {
@@ -337,7 +353,7 @@ a {
 }
 
 .header_nav .catalogs .catalogs_list {
-  display: none;
+  display: block;
   position: absolute;
   height: 462px;
   background: #FEFCF9;

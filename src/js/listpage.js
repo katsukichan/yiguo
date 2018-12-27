@@ -12,6 +12,13 @@ jQuery(function($){
     //分页
     var $page_list = $('.page_list');
     
+    //登录判断
+    isLogin(false);
+
+    //头部购物车请求
+    reCarData(false);
+    headDel(false);
+    
     //每页的数量
     var qty = 8;
     //当前页数
@@ -33,7 +40,7 @@ jQuery(function($){
             way = 's_default';
             getData(qty,currentPage,way);
         }
-    })
+    });
 
     $s_price.on('click',function(){
         //原默认排序时点击，执行价格升序排序
@@ -61,7 +68,7 @@ jQuery(function($){
             getData(qty,currentPage,way);
             return;
         }
-    })
+    });
 
     //分页点击
     $page_list.on('click',function(e){
@@ -86,7 +93,7 @@ jQuery(function($){
                 getData(qty,currentPage,way);
             }
         }
-    })
+    });
 
     //点击商品，传输商品guid
     $item_list.on('click',function(e){
@@ -100,7 +107,7 @@ jQuery(function($){
             var guid = currentLi.getAttribute('data-guid');
             location.href = `datails.html?guid=${guid}`;
         }
-    })
+    });
     
     //商品列表渲染
     function createList(data){
@@ -123,7 +130,7 @@ jQuery(function($){
                             </div>
                         </div>
                     </li>`
-        }).join(''))
+        }).join(''));
     }
 
     function getData(){
@@ -159,6 +166,6 @@ jQuery(function($){
                 }
                 $(`<li class="next_page">下一页</li>`).appendTo($page_list);
             } 
-        })
+        });
     }
 })

@@ -29,10 +29,10 @@
         $res = $conn->query('select * from goods_data where guid="'.$guid.'"');
         if($res->num_rows > 0){
             $content = $res->fetch_all(MYSQLI_ASSOC);
+            echo json_encode($content,JSON_UNESCAPED_UNICODE);
         }else{
             echo "没有满足条件的数据";
         }
-        echo json_encode($content,JSON_UNESCAPED_UNICODE);
 
         $res->close();
         $conn->close();

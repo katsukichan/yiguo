@@ -74,6 +74,17 @@ a {
   background: url(../img/header_icon.png) no-repeat -12px 0;
 }
 
+.top_nav .fr .login .user {
+  display: inline-block;
+  width: 50px;
+  font-size: 12px;
+  color: #444444;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
 .top_nav .fr .tel i {
   background-position: -86px 0;
 }

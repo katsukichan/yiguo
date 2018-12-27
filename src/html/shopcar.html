@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="../css/shopcar.css">
     <link rel="stylesheet" href="../css/base.css">
     <script src="../lib/jquery-3.2.1.js"></script>
+    <script src="../js/islogin.js"></script>
     <script src="../js/shopcar.js"></script>
 </head>
 <body>
@@ -24,8 +25,6 @@
                 <li class="pay"><a href="javascript:;"><i></i>礼品卡绑定</a></li>
                 <li class="mobile"><a href="javascript:;"><i></i>手机易果<s></s></a></li>
                 <li class="my_yiguo"><a href="javascript:;"><i></i>我的易果<s></s></a></li>
-                <li><a href="registe.html">[注册]</a></li>
-                <li><a href="login.html">[登录]</a></li>
             </ul>
         </div>
     </div>
@@ -51,7 +50,7 @@
                     您尚未登录<a href="login.html">登录</a>
                 </p>
             </div>
-            <!-- 购物车有物品时结构 -->
+            <!-- 购物车有物品结构 -->
             <div class="cart_in">
                 <h2>我的购物车
                     <a href="../index.html">继续购物</a>
@@ -65,7 +64,7 @@
                                 <tr>
                                     <th class="t_check">
                                         <label>
-                                            <input type="checkbox" class="check_all">
+                                            <input type="checkbox" class="check_all" checked="checked">
                                             全选
                                         </label>
                                     </th>
@@ -81,45 +80,22 @@
                     </div>
                     <!-- 购物车列表 -->
                     <div class="cart_list">
-                        <table class="cart_table">
-                            <tbody>
-                                <tr>
-                                    <td class="t_check">
-                                        <input type="checkbox">
-                                    </td>
-                                    <td class="t_img">
-                                        <img src="../img/goods_item1.jpg">
-                                    </td>
-                                    <td class="t_info">美威欧式原味三文鱼排(2片装)250g*2</td>
-                                    <td class="t_price">￥125.00</td>
-                                    <td class="t_num">
-                                        <div class="num_box">
-                                            <a href="javascript:;" class="decrease"></a>
-                                            <input type="text" maxlength="2" class="itxt">
-                                            <a href="javascript:;" class="increase"></a>
-                                        </div>
-                                    </td>
-                                    <td class="t_total">￥125.00</td>
-                                    <td class="t_spec">(2片装)250g*2</td>
-                                    <td class="t_opera"><a href="javascript:;">删除</a></td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <table class="cart_table" id="cart_table"></table>
                     </div>
                     <!-- 购物车底部 -->
                     <div class="cart_footer clearfix">
                         <div class="fl">
                             <label>
-                                <input type="checkbox" class="check_all">
+                                <input type="checkbox" class="check_all" checked="checked">
                                 全选
                             </label>
-                            <a href="javascript:;">删除选中商品</a>
-                            <a href="javascript:;">清空购物车</a>
+                            <a href="javascript:;" class="delete_choose_btn">删除选中商品</a>
+                            <a href="javascript:;" class="clear_btn">清空购物车</a>
                         </div>
                         <div class="fr">
                             <span>
                                 总价:
-                                <em>￥125.00</em>
+                                <em class="total_price">￥125.00</em>
                             </span>
                             <a href="javascript:;" class="btn">去结算</a>
                         </div>

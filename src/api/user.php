@@ -46,7 +46,8 @@
     if($login){
     	$res = $conn->query('select * from user where phone="'.$l_phone.'" and password="'.$l_password.'"');
     	if($res->num_rows >0){
-    		echo "成功";
+    		$content = $res->fetch_all(MYSQLI_ASSOC);
+            echo json_encode($content,JSON_UNESCAPED_UNICODE);
     	}else{
     		echo "用户名或密码错误";
     	}

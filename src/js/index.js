@@ -1,9 +1,30 @@
 jQuery(function($){
+    //判断登录状态
+    isLogin(true);
+
+    //一级导航
+    var $catalogs_title = $('.catalogs_title');
+    //二级导航
+    var $catalogs_list = $('.catalogs_list');
+    //一级导航点击
+    $catalogs_title.on('click',function(){
+        if($catalogs_list.css('display') == 'block'){
+            $catalogs_list.css('display','none');
+        }else{
+            $catalogs_list.css('display','block');
+        }
+    });
+
+    //头部购物车请求
+    reCarData(true);
+    headDel(true);
+
     //轮播图
     $('.flexslider').flexslider({
         directionNav: true,
         pauseOnAction: false
     });
+
     //商品楼层div
     var $floor = $('#floor');
     //商品1楼层图片数组
@@ -26,7 +47,7 @@ jQuery(function($){
             }
             createFloor(floorArr1,floorArr2);
         }
-    })
+    });
 
     //商品楼层渲染
     function createFloor(){

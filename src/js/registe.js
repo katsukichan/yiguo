@@ -65,8 +65,8 @@ jQuery(function($){
                     location.href = "login.html";
                 }
             }
-        }) 
-    })
+        }); 
+    });
 
     function registeCheck(){
         //手机号判断
@@ -123,7 +123,7 @@ jQuery(function($){
             }else{
                 $tabchk.next().next().next().html('');
             }
-        })
+        });
     }
 
 })

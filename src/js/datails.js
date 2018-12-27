@@ -22,10 +22,18 @@ jQuery(function($){
     //数量增
     var $increase = $('.increase');
     //添加到购物车按钮
-    var $add_car_btn = $('.btn_box').children();
+    var $add_car_btn = $('.btn_box a');
     //获取列表页传参
     var params = location.search.substring(1);;
     var guid = params.split('=')[1];
+    //定义变量存本地路径
+    var imgPath;
+    //购物车飞入img
+    var $fly_img = $('#fly');
+
+    //登录判断
+    isLogin(false);
+    
     $.ajax({
         type : "get",
             url : `../api/goods_data.php?guid=${guid}`,
@@ -33,10 +41,17 @@ jQuery(function($){
                 var res = JSON.parse(res);
                 $title.html(res[0].gmsg);
                 $price.html(res[0].gprice);
+                imgPath = res[0].gimg;
+                $fly_img.prop('src',`../${imgPath}`);
                 $goodImg.prop('src',`../${res[0].gimg}`);
                 $big_img.prop('src',`../${res[0].gimg}`);
             } 
     })
+
+    //头部购物车请求
+    reCarData(false);
+    headDel(false);
+
     //图片切换
     $pic_ul.on('mouseover',function(e){
         if(e.target.tagName = "IMG"){
@@ -56,7 +71,7 @@ jQuery(function($){
                 $big_img.prop('src',imgPath); 
             }
         }
-    })
+    });
 
     //放大镜效果
     $big_img.on('mouseover',function(){
@@ -90,7 +105,7 @@ jQuery(function($){
         }
         $sp.css({left:$ox,top:$oy});
         $show_big_img.css({marginTop:-$oy*scale,marginLeft:-$ox*scale});
-    })
+    });
 
     //判断商品数量值
     $good_num.on('blur',function(){
@@ -98,24 +113,37 @@ jQuery(function($){
             alert('请输入2位及以内整数');
             $good_num.val('1');
         }
-    })
+    });
     //数量减
     $decrease.on('click',function(){
         if($good_num.val() == 1){
             return;
         }
         $good_num.val($good_num.val()-1);
-    })
+    });
     //数量增
     $increase.on('click',function(){
         if($good_num.val() == 99){
             return;
         }
         $good_num.val($good_num.val()*1+1);
-    })
-    //加入购物车点击
+    });
+    //加入购物车，添加数据
     $add_car_btn.on('click',function(){
-        //获取题头，价格，数量，存入数据库
-
-    })
+        $fly_img.css('display','block').animate({left:600,top:-395},1000,function(){
+            $fly_img.css('display','none');
+            $fly_img.css({left:0,top:0});
+            //获取题头，价格，数量，商品id存入数据库
+            $.ajax({
+                type : "get",
+                url : `../api/car_data.php?add_data=${true}&guid=${guid}
+                    &msg=${$title.html()}&img=${imgPath}
+                    &price=${$price.html()}&num=${$good_num.val()}`,
+                success : function(res){
+                    console.log(res);
+                    reCarData(false);
+                } 
+            });
+        });
+    });
 })
