@@ -57,7 +57,7 @@ jQuery(function(){
         if(delNum == 0){
             return;
         }
-        //发送请求，传入删除的guid和删除次数
+        //根据删除次数发送请求，异步
     })
 
     //清空购物车

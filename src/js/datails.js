@@ -33,6 +33,10 @@ jQuery(function($){
 
     //登录判断
     isLogin(false);
+    //返回顶部
+    bacakTop();
+    //吸顶菜单
+    fixTop();
     
     $.ajax({
         type : "get",

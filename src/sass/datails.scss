@@ -7,6 +7,33 @@ a {
 #top_nav{
     background: #F7F9F8;
 }
+.sidebar{
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    width: 56px;
+    .s_btn{
+        display: block;
+        width: 50px;
+        height: 42px;
+        margin-bottom: 10px;
+        background: url(../img/sidebar.png) no-repeat left top;
+        overflow: hidden;
+        z-index: 10;
+    }
+    .service{
+        background-position: 0 -46px;
+    }
+    .service:hover{
+        background-position: -56px -46px;
+    }
+    .back_top{
+        display: none;
+    }
+    .back_top:hover{
+        background-position: -56px 0;
+    }
+}
 .top_nav{
     .fl{
         li{
@@ -289,6 +316,24 @@ a {
         .shop_list{
             display: block;
         }
+    }
+}
+.fix_top{
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: url(../img/header_fixed_bg.png) repeat;
+    .logo{
+        width: 220px;
+    }
+    .search_bar{
+        float: left;
+        margin-right: 10px;
+    }
+    .search_keywords{
+        float: left;
     }
 }
 

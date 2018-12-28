@@ -1,7 +1,10 @@
 jQuery(function($){
     //判断登录状态
     isLogin(true);
-
+    //吸顶菜单
+    fixTop();
+    //返回顶部
+    bacakTop();
     //一级导航
     var $catalogs_title = $('.catalogs_title');
     //二级导航

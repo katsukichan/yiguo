@@ -44,7 +44,7 @@
     }
     //登录查询语句
     if($login){
-    	$res = $conn->query('select * from user where phone="'.$l_phone.'" and password="'.$l_password.'"');
+    	$res = $conn->query('select phone from user where phone="'.$l_phone.'" and password="'.$l_password.'"');
     	if($res->num_rows >0){
     		$content = $res->fetch_all(MYSQLI_ASSOC);
             echo json_encode($content,JSON_UNESCAPED_UNICODE);

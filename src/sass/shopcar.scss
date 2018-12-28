@@ -121,7 +121,6 @@ a {
 }
 .cart{
     .cart_none{
-        display: none;
         border: 1px solid #e3e6e0;
         background: #fff;
         line-height: 30px;
@@ -146,6 +145,7 @@ a {
         }
     }
     .cart_in{
+        display: none;
         h2{
             position: relative;
             height: 38px;

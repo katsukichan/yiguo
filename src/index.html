@@ -5,12 +5,20 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/base.css">
     <script src="lib/jquery-3.2.1.js"></script>
+    <script src="lib/jquery.cookie.js"></script>
     <script src="lib/jquery.flexslider-min.js"></script>
     <script src="js/header_car.js"></script>
     <script src="js/islogin.js"></script>
+    <script src="js/back_top.js"></script>
+    <script src="js/fix_top.js"></script>
     <script src="js/index.js"></script>
 </head>
 <body>
+    <!-- sidebar侧边栏 -->
+    <div class="sidebar">
+        <a href="javascript:;" class="s_btn service"></a>
+        <a href="javascript:;" class="s_btn back_top"></a>
+    </div>
     <!-- top_nav顶部导航 -->
     <div id="top_nav">
         <div class="top_nav con clearfix">
@@ -38,7 +46,7 @@
                 <a href="javascript:;" class="fl"></a>              
             </div>
             <!-- 搜索框 -->
-            <div class="search">
+            <div class="search clearfix">
                 <div class="search_bar clearfix">
                     <input type="text" class="search_input" placeholder="输入商品名／编号／拼音">
                     <input type="submit" class="search_btn" value="搜索">

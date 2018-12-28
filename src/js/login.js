@@ -7,7 +7,7 @@ jQuery(function($){
     var $input_key = $('.input_key');
     //登录按钮
     var $btnLogin = $('#btnLogin');
-    console.log(666);
+
     //登录按钮点击
     $btnLogin.on('click',function(){
         if($input_phone.val().trim() == 0 || $input_key.val().trim() == 0){
@@ -24,11 +24,9 @@ jQuery(function($){
                     }else{
                         //将用户名存入cookie
                         var res = JSON.parse(res);
-                        console.log(res);
-                        // var d = new Date();
-                        // d.setDate(d.getDate()+7);
-                        // Cookie.set('username',_name,{expires:d}); 
-                        // location.href = "../index.html";
+                        //jq设置cookie
+                        $.cookie('username', res[0].phone, {expires: 3,path: '/'});
+                        location.href = "../index.html";
                     }
                 }
             })

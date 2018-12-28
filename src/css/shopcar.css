@@ -129,7 +129,6 @@ a {
 }
 
 .cart .cart_none {
-  display: none;
   border: 1px solid #e3e6e0;
   background: #fff;
   line-height: 30px;
@@ -156,6 +155,10 @@ a {
 .cart .cart_none a {
   color: #008842;
   font-size: 14px;
+}
+
+.cart .cart_in {
+  display: none;
 }
 
 .cart .cart_in h2 {
