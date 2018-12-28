@@ -10,6 +10,7 @@ a {
   bottom: 30px;
   right: 10px;
   width: 56px;
+  z-index: 10;
 }
 
 .sidebar .s_btn {
@@ -19,7 +20,6 @@ a {
   margin-bottom: 10px;
   background: url(../img/sidebar.png) no-repeat left top;
   overflow: hidden;
-  z-index: 10;
 }
 
 .sidebar .service {
@@ -520,7 +520,6 @@ a {
   width: 100%;
   height: 500px;
   top: -38px;
-  z-index: -1;
 }
 
 #banner .flexslider {
