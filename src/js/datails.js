@@ -133,7 +133,7 @@ jQuery(function($){
         }
         $good_num.val($good_num.val()*1+1);
     });
-    //加入购物车，添加数据，未加连续点击动画有bug，由于localhost文件未更新添加后效果未看到
+    //加入购物车，添加数据
     $add_car_btn.on('click',function(){
         $add_car_btn.unbind();
         $fly_img.css('display','block').animate({left:600,top:-395},1000,function(){
@@ -150,6 +150,6 @@ jQuery(function($){
                     reCarData(false);
                 } 
             });
-        }.stop(false,true));
+        });
     });
 })
