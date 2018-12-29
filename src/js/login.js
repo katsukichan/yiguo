@@ -7,6 +7,8 @@ jQuery(function($){
     var $input_key = $('.input_key');
     //登录按钮
     var $btnLogin = $('#btnLogin');
+    //自动登录checkbox
+    var $auto_login = $('.auto_login');
 
     //登录按钮点击
     $btnLogin.on('click',function(){
@@ -24,8 +26,14 @@ jQuery(function($){
                     }else{
                         //将用户名存入cookie
                         var res = JSON.parse(res);
-                        //jq设置cookie
-                        $.cookie('username', res[0].phone, {expires: 3,path: '/'});
+                        var isAutoLogin = $auto_login[0].checked;
+                        if(isAutoLogin){
+                            //jq设置cookie,自动登录设置保存7天
+                            $.cookie('username', res[0].phone, {expires: 7,path: '/'});
+                        }else{
+                            //jq设置cookie，不自动登录不设置expires
+                            $.cookie('username', res[0].phone, {path: '/'});
+                        }
                         location.href = "../index.html";
                     }
                 }

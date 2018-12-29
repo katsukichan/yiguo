@@ -108,6 +108,7 @@ jQuery(function($){
             $oy=$big_img.outerHeight()-$sp.outerHeight();
         }
         $sp.css({left:$ox,top:$oy});
+        //放大图位置跟随改变
         $show_big_img.css({marginTop:-$oy*scale,marginLeft:-$ox*scale});
     });
 
@@ -132,8 +133,9 @@ jQuery(function($){
         }
         $good_num.val($good_num.val()*1+1);
     });
-    //加入购物车，添加数据
+    //加入购物车，添加数据，未加连续点击动画有bug，由于localhost文件未更新添加后效果未看到
     $add_car_btn.on('click',function(){
+        $add_car_btn.unbind();
         $fly_img.css('display','block').animate({left:600,top:-395},1000,function(){
             $fly_img.css('display','none');
             $fly_img.css({left:0,top:0});
@@ -148,6 +150,6 @@ jQuery(function($){
                     reCarData(false);
                 } 
             });
-        });
+        }.stop(false,true));
     });
 })

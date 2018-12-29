@@ -57,20 +57,24 @@ jQuery(function(){
         if(delNum == 0){
             return;
         }
-        //根据删除次数发送请求，异步
+        //根据删除次数发送请
     })
 
     //清空购物车
     $clear_btn.on('click',function(){
-        $.ajax({
-            type : 'get',
-            url : `../api/car_data.php?delete_data=${true}`,
-            success : function(res){
-                if(res == '全部删除'){
-                    createShopCar();
+        if(confirm("确认商品全部删除？") == true){
+            $.ajax({
+                type : 'get',
+                url : `../api/car_data.php?delete_data=${true}`,
+                success : function(res){
+                    if(res == '全部删除'){
+                        createShopCar();
+                    }
                 }
-            }
-        });
+            });
+        }else{
+            return ;
+        }
     });
 
     //table中点击事件
@@ -122,15 +126,20 @@ jQuery(function(){
             //获取当前行的guid
             var currentTr = e.target.parentElement.parentElement;
             var currentGuid = currentTr.getAttribute('data-guid');
-            $.ajax({
-                type : 'get',
-                url : `../api/car_data.php?delete_data=${true}&guid=${currentGuid}`,
-                success : function(res){
-                    if(res == '删除成功'){
-                        createShopCar();
+            if(confirm("确认删除该商品？") == true){
+                $.ajax({
+                    type : 'get',
+                    url : `../api/car_data.php?delete_data=${true}&guid=${currentGuid}`,
+                    success : function(res){
+                        if(res == '删除成功'){
+                            createShopCar();
+                        }
                     }
-                }
-            });
+                });
+            }else{
+                return ;
+            }
+            
         }
         //checkbox按键
         if(e.target.className == 'tr_check'){

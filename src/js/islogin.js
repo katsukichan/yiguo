@@ -9,7 +9,6 @@ function isLogin(isIndex){
         $log_out = $('.logout');
         //点击登出，删除cookie,替换样式
         $log_out.on('click',function(){
-            console.log(666);
             //jq删除cookie
             $.cookie('username', '', { expires: -1 ,path: '/'});
             if(isIndex){
